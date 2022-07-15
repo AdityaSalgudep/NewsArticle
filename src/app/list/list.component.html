@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../../assets/images/newsLogo.png" alt="" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="changedArticle('1')">Apple Articles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="changedArticle('2')">Tesla Article</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="changedArticle('3')">Business Headlines</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="changedArticle('4')">TechCrunch Headlines</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+</nav>
+
+
+
+
+
+<div class="grdiView">
+    <div class="card a" *ngFor="let news of allNews| paginate: { itemsPerPage: 6, currentPage: p };index as i "
+        [routerLink]="['details',(p-1)*6+i]">
+        <img src={{news.urlToImage}} style="height: 240px; width: 100%;">
+        <div>
+            <p>{{news.title}}</p>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-beat" [fullScreen]="true">
+    <p style="color: rgb(255, 255, 255)"> Fetching News Please Wait!!! </p>
+</ngx-spinner>
+<pagination-controls (pageChange)="p = $event" style="text-align:center"></pagination-controls>

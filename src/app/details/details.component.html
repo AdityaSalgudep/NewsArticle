@@ -1,0 +1,15 @@
+<button class="btns" [routerLink]="['']"><i class="fa fa-home" aria-hidden="true"></i>
+</button>
+<div class="card">
+    <h2 class="main">{{news.title}}</h2>
+    <p class="main1">{{news.description}}</p>
+    <p class="updatedOn">Updated On :{{news.publishedAt}} | By {{news.author}}</p>
+
+    <img src={{news.urlToImage}}>
+    <div>
+        <p class="main1">{{news.content}}<a href={{news.url}} target="_blank">click to read full article</a> </p>
+        <button (click)="prevNews()" class="btns" *ngIf="newsId>0"><i class="fa fa-arrow-circle-left"
+                aria-hidden="true"></i></button>
+        <button (click)="nextNews()" class="btns"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+    </div>
+</div>

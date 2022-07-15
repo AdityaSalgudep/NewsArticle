@@ -1,0 +1,27 @@
+.grdiView {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1% 6%;
+    grid-gap: 10px;
+    display: grid;
+}
+
+.a {
+    border: 1px solid black;
+    min-width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navbarSupportedContent {
+    justify-content: right;
+}
+
+.nav-item {
+    margin-right: 120px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 55px;
+    margin-left: 20px;
+}

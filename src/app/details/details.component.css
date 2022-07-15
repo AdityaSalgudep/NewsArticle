@@ -1,0 +1,40 @@
+.main {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+}
+
+.main1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin: 0% 10%;
+    text-align: left;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+}
+
+.updatedOn {
+    text-align: left;
+    margin-left: 25%;
+}
+
+img {
+    height: 60vh;
+    margin: 0% 25%;
+}
+
+.btns {
+    color: rgb(6, 174, 31);
+    border-color: rgb(6, 174, 31);
+    font-size: 16px;
+    border-radius: 12px;
+    height: 45px;
+    width: 90px;
+    margin: 20px;
+}
